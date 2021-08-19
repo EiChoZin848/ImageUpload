@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   
+   <head>
+      <title>Uploading Image</title>
+      <%= stylesheet_link_tag "application", :media => "all", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+      <%= csrf_meta_tag %>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <%= stylesheet_link_tag "resume", :media => "all" %>
+      <%= stylesheet_link_tag    'bootstrap.min', :media => "all" %>
+      <%= stylesheet_link_tag    'bootstrap', :media => "screen" %>
+
+   </head>
+   
+   <body>
+      <div class = "container" style = "padding-top:20px;">
+         <%= yield %>
+      </div>
+   </body>
+
+</html>

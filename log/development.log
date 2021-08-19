@@ -1,0 +1,2138 @@
+DEPRECATION WARNING: ActiveSupport::Dependencies.load_paths is deprecated, please use autoload_paths instead. (called from C:/Ruby187/lib/ruby/gems/1.8/gems/carrierwave-0.4.9/lib/carrierwave.rb:84)
+DEPRECATION WARNING: ActiveSupport::Dependencies.load_paths is deprecated, please use autoload_paths instead. (called from C:/Ruby187/lib/ruby/gems/1.8/gems/carrierwave-0.4.9/lib/carrierwave.rb:84)
+  [4;36;1mSQL (15.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (250.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateResumes (20210716084438)
+  [4;35;1mSQL (15.7ms)[0m   [0mCREATE TABLE "resumes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "attachment" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20210716084438')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("resumes")[0m
+DEPRECATION WARNING: ActiveSupport::Dependencies.load_paths is deprecated, please use autoload_paths instead. (called from C:/Ruby187/lib/ruby/gems/1.8/gems/carrierwave-0.4.9/lib/carrierwave.rb:84)
+DEPRECATION WARNING: ActiveSupport::Dependencies.load_paths is deprecated, please use autoload_paths instead. (called from C:/Ruby187/lib/ruby/gems/1.8/gems/carrierwave-0.4.9/lib/carrierwave.rb:84)
+DEPRECATION WARNING: ActiveSupport::Dependencies.load_paths is deprecated, please use autoload_paths instead. (called from C:/Ruby187/lib/ruby/gems/1.8/gems/carrierwave-0.4.9/lib/carrierwave.rb:84)
+DEPRECATION WARNING: ActiveSupport::Dependencies.load_paths is deprecated, please use autoload_paths instead. (called from C:/Ruby187/lib/ruby/gems/1.8/gems/carrierwave-0.4.10/lib/carrierwave.rb:84)
+DEPRECATION WARNING: ActiveSupport::Dependencies.load_paths is deprecated, please use autoload_paths instead. (called from C:/Ruby187/lib/ruby/gems/1.8/gems/carrierwave-0.4.10/lib/carrierwave.rb:84)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 15:45:10) [GET]
+  [4;36;1mResume Load (2.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+ERROR: compiling _run_erb_app47views47resumes47index46html46erb RAISED compile error
+C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:29: syntax error, unexpected ':', expecting ')'
+..._to "Delete",  resume, method: :delete, :class =>"btn btn-da...
+                              ^
+C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:29: syntax error, unexpected ',', expecting ')'
+...te, :class =>"btn btn-danger", :confirm => "Are you sure tha...
+                              ^
+Function body:           def _run_erb_app47views47resumes47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Resumes#index</h1>\n<p>Find me in app/views/resumes/index.html.erb</p>\n"
+
+;  if !flash[:notice].blank? ; @output_buffer.concat "\n   <div class = \"alert alert-info\">\n      "
+
+; @output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "\n   </div>\n"
+
+;  end ; @output_buffer.concat "\n\n<br />\n"
+
+
+; @output_buffer.concat(( link_to "New Resume", new_resume_path, :class => "btn btn-primary" ).to_s); @output_buffer.concat "\n<br />\n<br />\n\n<table class = \"table table-bordered table-striped\">\n   <thead>.\n      <tr>\n         <th>Name</th>\n         <th>Download Link</th>\n         <th> </th>\n      </tr>\n   </thead>\n   \n   <tbody>\n      "
+
+
+
+
+
+
+
+
+
+
+
+
+
+;  @resumes.each do |resume| ; @output_buffer.concat "\n         \n         <tr>\n            <td>"
+
+
+; @output_buffer.concat(( resume.name ).to_s); @output_buffer.concat "</td>\n            <td>"
+; @output_buffer.concat(( link_to "Download Resume", resume.attachment_url ).to_s); @output_buffer.concat "</td>\n            <td>"
+; @output_buffer.concat(( button_to "Delete",  resume, method: :delete, :class =>"btn btn-danger", :confirm => "Are you sure that you wish to delete #{resume.name}?" ).to_s); @output_buffer.concat "</td>\n         </tr>\n         \n      "
+
+
+;  end ; @output_buffer.concat "\n   </tbody>\n   \n</table>"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:38:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:29: syntax error, unexpected ':', expecting ')'
+..._to "Delete",  resume, method: :delete, :class =>"btn btn-da...
+                              ^
+C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:29: syntax error, unexpected ',', expecting ')'
+...te, :class =>"btn btn-danger", :confirm => "Are you sure tha...
+                              ^) on line #29 of app/views/resumes/index.html.erb:
+26:          <tr>
+27:             <td><%= resume.name %></td>
+28:             <td><%= link_to "Download Resume", resume.attachment_url %></td>
+29:             <td><%= button_to "Delete",  resume, method: :delete, :class =>"btn btn-danger", :confirm => "Are you sure that you wish to delete #{resume.name}?" %></td>
+30:          </tr>
+31:          
+32:       <% end %>
+
+    app/views/resumes/index.html.erb:38:in `compile!'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (169.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 15:46:01) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+C:/rails_projects/ImageUpload/app/views/layouts/application.html.erb:6: syntax error, unexpected ':', expecting ')'
+...link_tag "application", media: "all", "data-turbolinks-track...
+                              ^
+C:/rails_projects/ImageUpload/app/views/layouts/application.html.erb:6: syntax error, unexpected ',', expecting ')'
+...g "application", media: "all", "data-turbolinks-track" => tr...
+                              ^
+C:/rails_projects/ImageUpload/app/views/layouts/application.html.erb:6: syntax error, unexpected tASSOC, expecting ')'
+...l", "data-turbolinks-track" => true ).to_s); @output_buffer....
+                              ^
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html>\n   \n   <head>\n      <title>Tutorialspoint</title>\n      "
+
+
+
+
+; @output_buffer.concat(( stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true ).to_s); @output_buffer.concat "\n      "
+; @output_buffer.concat(( javascript_include_tag "application", "data-turbolinks-track" => true ).to_s); @output_buffer.concat "\n      "
+; @output_buffer.concat(( csrf_meta_tag ).to_s); @output_buffer.concat "\n   </head>\n   \n   <body>\n      <div class = \"container\" style = \"padding-top:20px;\">\n         "
+
+
+
+
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n      </div>\n   </body>\n\n</html>"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/rails_projects/ImageUpload/app/views/layouts/application.html.erb:20:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:352:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/rails_projects/ImageUpload/app/views/layouts/application.html.erb:6: syntax error, unexpected ':', expecting ')'
+...link_tag "application", media: "all", "data-turbolinks-track...
+                              ^
+C:/rails_projects/ImageUpload/app/views/layouts/application.html.erb:6: syntax error, unexpected ',', expecting ')'
+...g "application", media: "all", "data-turbolinks-track" => tr...
+                              ^
+C:/rails_projects/ImageUpload/app/views/layouts/application.html.erb:6: syntax error, unexpected tASSOC, expecting ')'
+...l", "data-turbolinks-track" => true ).to_s); @output_buffer....
+                              ^) on line #6 of app/views/layouts/application.html.erb:
+3:    
+4:    <head>
+5:       <title>Tutorialspoint</title>
+6:       <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+7:       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+8:       <%= csrf_meta_tag %>
+9:    </head>
+
+    app/views/layouts/application.html.erb:20:in `compile!'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 15:46:31) [GET]
+  [4;36;1mResume Load (1.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 19909ms (View: 19843, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 15:47:46) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+ERROR: compiling _run_erb_app47views47resumes47new46html46erb RAISED compile error
+C:/rails_projects/ImageUpload/app/views/resumes/new.html.erb:20: syntax error, unexpected ':'
+...ncat(( f.submit "Save", class: "btn btn-primary" ).to_s); @o...
+                              ^
+Function body:           def _run_erb_app47views47resumes47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "\n"
+;  if !@resume.errors.empty? ; @output_buffer.concat "\n   <div class = \"alert alert-error\">\n      \n      <ul>\n         "
+
+
+
+;  @resume.errors.full_messages.each do |msg| ; @output_buffer.concat "\n            <li>"
+; @output_buffer.concat(( msg ).to_s); @output_buffer.concat "</li>\n         "
+;  end ; @output_buffer.concat "\n      </ul>\n      \n   </div>\n"
+
+
+
+;  end ; @output_buffer.concat "\n\n<div class = \"well\">\n   "
+
+
+;  form_for @resume, :html => { :multipart => true } do |f| ; @output_buffer.concat "\n      "
+; @output_buffer.concat(( f.label :name ).to_s); @output_buffer.concat "\n      "
+; @output_buffer.concat(( f.text_field :name ).to_s); @output_buffer.concat "\n      "
+; @output_buffer.concat(( f.label :attachment ).to_s); @output_buffer.concat "\n      "
+; @output_buffer.concat(( f.file_field :attachment ).to_s); @output_buffer.concat "\n      "
+; @output_buffer.concat(( f.submit "Save", class: "btn btn-primary" ).to_s); @output_buffer.concat "\n   "
+;  end ; @output_buffer.concat "\n</div>"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/rails_projects/ImageUpload/app/views/resumes/new.html.erb:25:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/rails_projects/ImageUpload/app/views/resumes/new.html.erb:20: syntax error, unexpected ':'
+...ncat(( f.submit "Save", class: "btn btn-primary" ).to_s); @o...
+                              ^) on line #20 of app/views/resumes/new.html.erb:
+17:       <%= f.text_field :name %>
+18:       <%= f.label :attachment %>
+19:       <%= f.file_field :attachment %>
+20:       <%= f.submit "Save", class: "btn btn-primary" %>
+21:    <% end %>
+22: </div>
+
+    app/views/resumes/new.html.erb:25:in `compile!'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (164.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 15:48:12) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.errors) on line #2 of app/views/resumes/new.html.erb:
+1: 
+2: <% if !@resume.errors.empty? %>
+3:    <div class = "alert alert-error">
+4:       
+5:       <ul>
+
+    app/views/resumes/new.html.erb:2
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (165.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 15:48:35) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 55ms (View: 10, DB: 2) | 200 OK [http://localhost/resumes/]
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 15:48:52) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.errors) on line #2 of app/views/resumes/new.html.erb:
+1: 
+2: <% if !@resume.errors.empty? %>
+3:    <div class = "alert alert-error">
+4:       
+5:       <ul>
+
+    app/views/resumes/new.html.erb:2
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 15:49:56) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.errors) on line #2 of app/views/resumes/new.html.erb:
+1: 
+2: <% if !@resume.errors.empty? %>
+3:    <div class = "alert alert-error">
+4:       
+5:       <ul>
+
+    app/views/resumes/new.html.erb:2
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (166.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 15:50:58) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 197ms (View: 47, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-07-16 15:51:36) [POST]
+  Parameters: {"resume"=>{"name"=>"Cake", "attachment"=>#<File:C:/Users/CM-NO-~1/AppData/Local/Temp/RackMultipart20210716-19296-930oc0-0>}, "authenticity_token"=>"ObNpkAyk5ADrbpTH8mhVjApnesZGzFDcxxN7iPK4zEs=", "commit"=>"Save"}
+
+TypeError (can't convert Symbol into String):
+  app/controllers/resumes_controller.rb:29:in `resume_params'
+  app/controllers/resumes_controller.rb:11:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-07-16 15:51:57) [POST]
+  Parameters: {"resume"=>{"name"=>"Cake", "attachment"=>#<File:C:/Users/CM-NO-~1/AppData/Local/Temp/RackMultipart20210716-19296-1o9icon-0>}, "authenticity_token"=>"ObNpkAyk5ADrbpTH8mhVjApnesZGzFDcxxN7iPK4zEs=", "commit"=>"Save"}
+
+TypeError (can't convert Symbol into String):
+  app/controllers/resumes_controller.rb:29:in `resume_params'
+  app/controllers/resumes_controller.rb:11:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (201.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 15:56:51) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 94ms (View: 40, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-07-16 15:57:07) [POST]
+  Parameters: {"resume"=>{"name"=>"a", "attachment"=>#<File:C:/Users/CM-NO-~1/AppData/Local/Temp/RackMultipart20210716-19296-qice3z-0>}, "authenticity_token"=>"ObNpkAyk5ADrbpTH8mhVjApnesZGzFDcxxN7iPK4zEs=", "commit"=>"Save"}
+
+TypeError (can't convert Symbol into String):
+  app/controllers/resumes_controller.rb:29:in `resume_params'
+  app/controllers/resumes_controller.rb:11:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-07-16 15:59:12) [POST]
+  Parameters: {"resume"=>{"name"=>"a", "attachment"=>#<File:C:/Users/CM-NO-~1/AppData/Local/Temp/RackMultipart20210716-19296-1kc945c-0>}, "authenticity_token"=>"ObNpkAyk5ADrbpTH8mhVjApnesZGzFDcxxN7iPK4zEs=", "commit"=>"Save"}
+  [4;36;1mResume Create (3.0ms)[0m   [0;1mINSERT INTO "resumes" ("updated_at", "created_at", "name", "attachment") VALUES('2021-07-16 09:29:12', '2021-07-16 09:29:12', 'a', 'examplefile.pdf')[0m
+Redirected to http://localhost:3000/resumes
+Completed in 408ms (DB: 3) | 302 Found [http://localhost/resumes]
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 15:59:12) [GET]
+  [4;35;1mResume Load (3.1ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 75ms (View: 22, DB: 3) | 200 OK [http://localhost/resumes]
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 15:59:43) [GET]
+  [4;36;1mResume Load (1.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 81ms (View: 33, DB: 1) | 200 OK [http://localhost/resumes]
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:01:55) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 100ms (View: 42, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:04:53) [GET]
+  [4;36;1mResume Load (1.9ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 105ms (View: 47, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:04:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:05:51) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 109ms (View: 38, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:05:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:06:33) [GET]
+  [4;36;1mResume Load (1.1ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 106ms (View: 47, DB: 1) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:06:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 16:06:41) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 147ms (View: 76, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:06:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:06:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 16:07:10) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 118ms (View: 48, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:07:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 16:07:28) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 139ms (View: 65, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:07:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 16:07:43) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 124ms (View: 60, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:07:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 16:08:41) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 114ms (View: 58, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:08:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-07-16 16:09:14) [POST]
+  Parameters: {"resume"=>{"name"=>""}, "authenticity_token"=>"ObNpkAyk5ADrbpTH8mhVjApnesZGzFDcxxN7iPK4zEs=", "commit"=>"Save"}
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 84ms (View: 36, DB: 0) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:09:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-07-16 16:09:31) [POST]
+  Parameters: {"resume"=>{"name"=>"sai"}, "authenticity_token"=>"ObNpkAyk5ADrbpTH8mhVjApnesZGzFDcxxN7iPK4zEs=", "commit"=>"Save"}
+  [4;35;1mResume Create (3.0ms)[0m   [0mINSERT INTO "resumes" ("updated_at", "created_at", "name", "attachment") VALUES('2021-07-16 09:39:31', '2021-07-16 09:39:31', 'sai', NULL)[0m
+Redirected to http://localhost:3000/resumes
+Completed in 184ms (DB: 3) | 302 Found [http://localhost/resumes]
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:09:31) [GET]
+  [4;36;1mResume Load (2.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 98ms (View: 39, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:09:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:09:43) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 75ms (View: 28, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:09:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#destroy (for 127.0.0.1 at 2021-07-16 16:10:04) [DELETE]
+  Parameters: {"id"=>"2", "authenticity_token"=>"ObNpkAyk5ADrbpTH8mhVjApnesZGzFDcxxN7iPK4zEs="}
+  [4;36;1mResume Load (1.0ms)[0m   [0;1mSELECT * FROM "resumes" WHERE ("resumes"."id" = 2) [0m
+  [4;35;1mResume Destroy (3.0ms)[0m   [0mDELETE FROM "resumes" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/resumes
+Completed in 182ms (DB: 4) | 302 Found [http://localhost/resumes/2]
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:10:04) [GET]
+  [4;36;1mResume Load (2.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 102ms (View: 33, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:10:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 16:16:00) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 143ms (View: 69, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:16:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-07-16 16:17:03) [POST]
+  Parameters: {"resume"=>{"name"=>"aa", "attachment"=>#<File:C:/Users/CM-NO-~1/AppData/Local/Temp/RackMultipart20210716-19296-1d0xu0h-0>}, "authenticity_token"=>"ObNpkAyk5ADrbpTH8mhVjApnesZGzFDcxxN7iPK4zEs=", "commit"=>"Save"}
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 2710ms (View: 17, DB: 0) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:17:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:25:49) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 106ms (View: 34, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:25:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 16:26:03) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 155ms (View: 101, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:26:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-07-16 16:26:43) [POST]
+  Parameters: {"resume"=>{"name"=>"aa", "attachment"=>#<File:C:/Users/CM-NO-~1/AppData/Local/Temp/RackMultipart20210716-19296-127jmic-0>}, "authenticity_token"=>"ObNpkAyk5ADrbpTH8mhVjApnesZGzFDcxxN7iPK4zEs=", "commit"=>"Save"}
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 2876ms (View: 18, DB: 0) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:26:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:47:01) [GET]
+  [4;36;1mResume Load (2.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+ERROR: compiling _run_erb_app47views47resumes47index46html46erb RAISED compile error
+C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:37: syntax error, unexpected '=', expecting ')'
+...@resume.attachment_url, :alt ='Attachment') if @resume.attac...
+                              ^
+C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:37: syntax error, unexpected kIF_MOD, expecting ')'
+...nt_url, :alt ='Attachment') if @resume.attachment? ).to_s); ...
+                              ^
+C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:37: syntax error, unexpected ')', expecting kEND
+...ent') if @resume.attachment? ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47resumes47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "\n"
+;  if !flash[:notice].blank? ; @output_buffer.concat "\n   <div class = \"alert alert-info\">\n      "
+
+; @output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "\n   </div>\n"
+
+;  end ; @output_buffer.concat "\n\n<br />\n"
+
+
+; @output_buffer.concat(( link_to "New Resume", new_resume_path, :class => "btn btn-primary" ).to_s); @output_buffer.concat "\n<br />\n<br />\n\n<table class = \"table table-bordered table-striped\">\n   <thead>.\n      <tr>\n         <th>Name</th>\n         <th>Download Link</th>\n         <th> </th>\n      </tr>\n   </thead>\n   \n   <tbody>\n      "
+
+
+
+
+
+
+
+
+
+
+
+
+
+;  @resumes.each do |resume| ; @output_buffer.concat "\n         \n         <tr>\n            <td>"
+
+
+; @output_buffer.concat(( resume.name ).to_s); @output_buffer.concat "</td>\n            <td>"
+; @output_buffer.concat(( link_to "Download Resume", resume.attachment_url ).to_s); @output_buffer.concat "</td>\n            <td>"
+; @output_buffer.concat(( button_to "Delete",  resume, :method => :delete, :class =>"btn btn-danger", :confirm => "Are you sure that you wish to delete #{resume.name}?" ).to_s); @output_buffer.concat "</td>\n         </tr>\n         \n      "
+
+
+;  end ; @output_buffer.concat "\n   </tbody>\n   \n</table>\n\n<div>\n        "
+
+
+
+
+
+; @output_buffer.concat(( image_tag(@resume.attachment_url, :alt ='Attachment') if @resume.attachment? ).to_s); @output_buffer.concat "\n</div>"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:41:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:37: syntax error, unexpected '=', expecting ')'
+...@resume.attachment_url, :alt ='Attachment') if @resume.attac...
+                              ^
+C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:37: syntax error, unexpected kIF_MOD, expecting ')'
+...nt_url, :alt ='Attachment') if @resume.attachment? ).to_s); ...
+                              ^
+C:/rails_projects/ImageUpload/app/views/resumes/index.html.erb:37: syntax error, unexpected ')', expecting kEND
+...ent') if @resume.attachment? ).to_s); @output_buffer.concat ...
+                              ^) on line #37 of app/views/resumes/index.html.erb:
+34: </table>
+35: 
+36: <div>
+37:         <%= image_tag(@resume.attachment_url, :alt ='Attachment') if @resume.attachment? %>
+38: </div>
+
+    app/views/resumes/index.html.erb:41:in `compile!'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (112.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:48:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:48:52) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+
+ActionView::TemplateError (undefined method `attachment?' for nil:NilClass) on line #37 of app/views/resumes/index.html.erb:
+34: </table>
+35: 
+36: <div>
+37:         <%= image_tag(@resume.attachment_url, :alt =>'Attachment') if @resume.attachment? %>
+38: </div>
+
+    app/views/resumes/index.html.erb:37
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (317.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:48:54) [GET]
+  [4;36;1mResume Load (3.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+
+ActionView::TemplateError (undefined method `attachment?' for nil:NilClass) on line #37 of app/views/resumes/index.html.erb:
+34: </table>
+35: 
+36: <div>
+37:         <%= image_tag(@resume.attachment_url, :alt =>'Attachment') if @resume.attachment? %>
+38: </div>
+
+    app/views/resumes/index.html.erb:37
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (243.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:48:54) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+
+ActionView::TemplateError (undefined method `attachment?' for nil:NilClass) on line #37 of app/views/resumes/index.html.erb:
+34: </table>
+35: 
+36: <div>
+37:         <%= image_tag(@resume.attachment_url, :alt =>'Attachment') if @resume.attachment? %>
+38: </div>
+
+    app/views/resumes/index.html.erb:37
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (179.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:49:02) [GET]
+  [4;36;1mResume Load (4.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+
+ActionView::TemplateError (undefined method `attachment?' for nil:NilClass) on line #37 of app/views/resumes/index.html.erb:
+34: </table>
+35: 
+36: <div>
+37:         <%= image_tag(@resume.attachment_url, :alt =>'Attachment') if @resume.attachment? %>
+38: </div>
+
+    app/views/resumes/index.html.erb:37
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (165.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-07-16 16:50:19) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 115ms (View: 53, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:50:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-07-16 16:50:23) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 134ms (View: 84, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:50:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-07-16 16:50:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: ActiveSupport::Dependencies.load_paths is deprecated, please use autoload_paths instead. (called from C:/Ruby187/lib/ruby/gems/1.8/gems/carrierwave-0.4.10/lib/carrierwave.rb:84)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 09:30:42) [GET]
+  [4;36;1mResume Load (1.9ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 25282ms (View: 24322, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 09:31:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-08-02 09:32:14) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 203ms (View: 107, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 09:32:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-08-02 09:32:40) [POST]
+  Parameters: {"commit"=>"Save", "resume"=>{"name"=>"1234", "attachment"=>#<File:C:/Users/CM-NO-~1/AppData/Local/Temp/RackMultipart20210802-10048-3wfn5k-0>}, "authenticity_token"=>"LGWolgmdjhi8mFbj0/v3hme745dIB+eqHUIAunHxBWc="}
+  [4;35;1mResume Create (292.0ms)[0m   [0mINSERT INTO "resumes" ("updated_at", "name", "attachment", "created_at") VALUES('2021-08-02 03:02:41', '1234', '1234.jpg', '2021-08-02 03:02:41')[0m
+Redirected to http://localhost:3000/resumes
+Completed in 1259ms (DB: 292) | 302 Found [http://localhost/resumes]
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 09:32:42) [GET]
+  [4;36;1mResume Load (2.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 89ms (View: 33, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 09:32:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: ActiveSupport::Dependencies.load_paths is deprecated, please use autoload_paths instead. (called from C:/Ruby187/lib/ruby/gems/1.8/gems/carrierwave-0.4.10/lib/carrierwave.rb:84)
+DEPRECATION WARNING: ActiveSupport::Dependencies.load_paths is deprecated, please use autoload_paths instead. (called from C:/Ruby187/lib/ruby/gems/1.8/gems/carrierwave-0.4.10/lib/carrierwave.rb:84)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:34:30) [GET]
+  [4;36;1mResume Load (30.9ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+
+ActionView::TemplateError (undefined method `image?' for nil:NilClass) on line #35 of app/views/resumes/index.html.erb:
+32:    </tbody>
+33:    
+34: </table>
+35: <%= image_tag(@resume.image_tag, :alt => 'Image' ) if @resume.image? %>
+
+    app/views/resumes/index.html.erb:35
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.0ms)
+Rendered rescues/_request_and_response (8.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:35:21) [GET]
+  [4;35;1mResume Load (2.1ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+
+ActionView::TemplateError (undefined method `attachment?' for nil:NilClass) on line #35 of app/views/resumes/index.html.erb:
+32:    </tbody>
+33:    
+34: </table>
+35: <%= image_tag(@resume.attachment_url, :alt => 'Attachment' ) if @resum.attachment? %>
+
+    app/views/resumes/index.html.erb:35
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (168.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:35:31) [GET]
+  [4;36;1mResume Load (1.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+
+ActionView::TemplateError (undefined method `attachment?' for nil:NilClass) on line #35 of app/views/resumes/index.html.erb:
+32:    </tbody>
+33:    
+34: </table>
+35: <%= image_tag(@resume.attachment_url, :alt => 'Attachment' ) if @resum.attachment? %>
+
+    app/views/resumes/index.html.erb:35
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (166.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:35:45) [GET]
+  [4;35;1mResume Load (1.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+
+ActionView::TemplateError (undefined method `attachment?' for nil:NilClass) on line #35 of app/views/resumes/index.html.erb:
+32:    </tbody>
+33:    
+34: </table>
+35: <%= image_tag(@resume.attachment_url, :alt => 'Attachment' ) if @resume.attachment? %>
+
+    app/views/resumes/index.html.erb:35
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (182.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:36:18) [GET]
+  [4;36;1mResume Load (1.9ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+
+ActionView::TemplateError (undefined method `attachment?' for #<Array:0x6d88eb0>) on line #35 of app/views/resumes/index.html.erb:
+32:    </tbody>
+33:    
+34: </table>
+35: <%= image_tag(@resumes.attachment_url, :alt => 'Attachment' ) if @resumes.attachment? %>
+
+    app/views/resumes/index.html.erb:35
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (158.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:38:02) [GET]
+  [4;35;1mResume Load (2.1ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 149ms (View: 91, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:38:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:41:35) [GET]
+  [4;36;1mResume Load (2.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 283ms (View: 74, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:41:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:43:19) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 148ms (View: 83, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:43:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:46:29) [GET]
+  [4;36;1mResume Load (3.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 696ms (View: 201, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:46:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-08-02 10:47:00) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 122ms (View: 67, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:47:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:47:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-08-02 10:47:09) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 101ms (View: 48, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:47:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-08-02 10:47:36) [POST]
+  Parameters: {"commit"=>"Save", "authenticity_token"=>"LGWolgmdjhi8mFbj0/v3hme745dIB+eqHUIAunHxBWc=", "resume"=>{"attachment"=>#<File:C:/Users/CM-NO-~1/AppData/Local/Temp/RackMultipart20210802-13776-1q7dcr2-0>, "name"=>"Arrow"}}
+  [4;35;1mResume Create (18.0ms)[0m   [0mINSERT INTO "resumes" ("attachment", "updated_at", "created_at", "name") VALUES('arrow.png', '2021-08-02 04:17:36', '2021-08-02 04:17:36', 'Arrow')[0m
+Redirected to http://localhost:3000/resumes
+Completed in 311ms (DB: 18) | 302 Found [http://localhost/resumes]
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:47:37) [GET]
+  [4;36;1mResume Load (2.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 176ms (View: 107, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:47:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:48:01) [GET]
+  [4;35;1mResume Load (1.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 201ms (View: 122, DB: 1) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:48:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:48:44) [GET]
+  [4;36;1mResume Load (2.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 228ms (View: 182, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:48:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 10:49:13) [GET]
+  [4;35;1mResume Load (2.1ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 200ms (View: 124, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:49:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-08-02 10:49:16) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 96ms (View: 43, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:49:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 10:49:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-08-02 11:25:17) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 105ms (View: 48, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 11:25:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-08-02 11:26:23) [POST]
+  Parameters: {"commit"=>"Save", "authenticity_token"=>"LGWolgmdjhi8mFbj0/v3hme745dIB+eqHUIAunHxBWc=", "resume"=>{"attachment"=>#<File:C:/Users/CM-NO-~1/AppData/Local/Temp/RackMultipart20210802-13776-8l8flb-0>, "name"=>"Cake"}}
+  [4;36;1mResume Create (32.9ms)[0m   [0;1mINSERT INTO "resumes" ("attachment", "updated_at", "created_at", "name") VALUES('cake.jpg', '2021-08-02 04:56:23', '2021-08-02 04:56:23', 'Cake')[0m
+Redirected to http://localhost:3000/resumes
+Completed in 392ms (DB: 33) | 302 Found [http://localhost/resumes]
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-02 11:26:24) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 141ms (View: 92, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-02 11:26:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: ActiveSupport::Dependencies.load_paths is deprecated, please use autoload_paths instead. (called from C:/Ruby187/lib/ruby/gems/1.8/gems/carrierwave-0.4.10/lib/carrierwave.rb:84)
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-16 10:15:55) [GET]
+  [4;36;1mResume Load (3.0ms)[0m   [0;1mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 19590ms (View: 18939, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-16 10:16:14) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 239ms (View: 148, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-16 10:16:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#new (for 127.0.0.1 at 2021-08-16 10:36:35) [GET]
+Rendering template within layouts/application
+Rendering resumes/new
+Completed in 248ms (View: 173, DB: 0) | 200 OK [http://localhost/resumes/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-16 10:36:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResumesController#create (for 127.0.0.1 at 2021-08-16 10:36:53) [POST]
+  Parameters: {"resume"=>{"attachment"=>#<File:C:/Users/CM-NO-~1/AppData/Local/Temp/RackMultipart20210816-9236-1nn5un7-0>, "name"=>"Guitar"}, "authenticity_token"=>"/1/b9NalhhJL4fAtixAOGZPwn1rUXvhKcVVRSSPWqEg=", "commit"=>"Save"}
+  [4;36;1mResume Create (8.0ms)[0m   [0;1mINSERT INTO "resumes" ("attachment", "created_at", "updated_at", "name") VALUES('instrument1.jpg', '2021-08-16 04:06:53', '2021-08-16 04:06:53', 'Guitar')[0m
+Redirected to http://localhost:3000/resumes
+Completed in 459ms (DB: 8) | 302 Found [http://localhost/resumes]
+
+
+Processing ResumesController#index (for 127.0.0.1 at 2021-08-16 10:36:54) [GET]
+  [4;35;1mResume Load (2.0ms)[0m   [0mSELECT * FROM "resumes" [0m
+Rendering template within layouts/application
+Rendering resumes/index
+Completed in 151ms (View: 102, DB: 2) | 200 OK [http://localhost/resumes]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2021-08-16 10:36:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/resume.css" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
